@@ -11,19 +11,13 @@ Work Buddies address the following issues a company faces:
 
 - Easily get the contact to an individual and team
 
-![Screen Shot 2019-10-30 at 12.22.45 AM](/Users/naty/work_buddies/table_photos/Screen Shot 2019-10-30 at 12.22.45 AM.png)
+![MVP_CANVAS](/Users/naty/work_buddies/table_photos/MVP_CANVAS.png)
 
-![Screen Shot 2019-10-30 at 12.22.56 AM](/Users/naty/work_buddies/table_photos/Screen Shot 2019-10-30 at 12.22.56 AM.png)
+![OVERVIEW](/Users/naty/work_buddies/table_photos/OVERVIEW.png)
 
-![Screen Shot 2019-10-30 at 12.23.05 AM](/Users/naty/work_buddies/table_photos/Screen Shot 2019-10-30 at 12.23.05 AM.png)
+![DATABASE](/Users/naty/work_buddies/table_photos/DATABASE.png)
 
-![Screen Shot 2019-10-30 at 12.23.15 AM](/Users/naty/work_buddies/table_photos/Screen Shot 2019-10-30 at 12.23.15 AM.png)
-
-
-
-
-
-
+![WEBSITE_MAPPING](/Users/naty/work_buddies/table_photos/WEBSITE_MAPPING.png)
 
 ## Installing
 
