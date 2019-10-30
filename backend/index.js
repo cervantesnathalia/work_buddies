@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
+const cors = require ('cors')
 
 
 
@@ -11,6 +12,7 @@ app.use(
     extended: true,
   })
 )
+app.use(cors())
 
 // define the root  - landing page
 app.get('/', (request, response) => {
@@ -33,21 +35,21 @@ app.get('/', (request, response) => {
 
 
   
-  app.post('/createuser',  (request, response) => db.createUser(request, response))
+  app.post('/createuser',  (request, response) => db.createUser(request, response)) //ok
 
-  app.post('/createteam',  (request, response) => db.createTeam(request, response))
+  app.post('/createteam',  (request, response) => db.createTeam(request, response)) //ok
 
-  app.get('/users/id/:id',  (request, response) => db.getUserById(request, response))
+  app.get('/users/id/:id',  (request, response) => db.getUserById(request, response)) //ok
 
-  app.get('/users/name/:name',  (request, response) => db.getUserByName(request, response))
+  app.get('/users/name/:name',  (request, response) => db.getUserByName(request, response)) //ok
 
-  app.get('/users/location/:office_location',  (request, response) => db.getUserByOfficeLocation(request, response))
+  app.get('/users/location/:office_location',  (request, response) => db.getUserByOfficeLocation(request, response)) //ok
 
-  app.get('/users/business_title/:business_title',  (request, response) => db.getUserByBusinessTitle(request, response))
+  app.get('/users/business_title/:business_title',  (request, response) => db.getUserByBusinessTitle(request, response)) //ok
 
-  app.get('/allusers',  (request, response) => db.getAllUsers(request, response))
+  app.get('/allusers',  (request, response) => db.getAllUsers(request, response)) //ok
 
-  app.get('/teams',  (request, response) => db.getAllTeams(request, response))
+  app.get('/teams',  (request, response) => db.getAllTeams(request, response)) //ok
 
 
 
