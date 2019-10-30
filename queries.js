@@ -39,13 +39,13 @@ const createUser = (request, response) => {
   pool.query(
     "INSERT INTO user_table (username, password, name, office_location, slack_name, work_email, business_title, team_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
     [
-      username.lowercase(),
+      username.toLowerCase(),
       password,
-      name.lowercase(),
-      office_location.lowercase(),
-      slack_name.lowercase(),
-      work_email.lowercase(),
-      business_title.lowercase(),
+      name.toLowerCase(),
+      office_location.toLowerCase(),
+      slack_name.toLowerCase(),
+      work_email.toLowerCase(),
+      business_title.toLowerCase(),
       team_id
     ],
     (error, results) => {
@@ -83,9 +83,9 @@ const createTeam = (request, response) => {
     pool.query(
       "INSERT INTO team_table (team_name, slack_channel, team_email, manager_id, product_owner_id) VALUES ($1, $2, $3, $4, $5)",
       [
-        team_name.lowercase(),
-        slack_channel.lowercase(),
-        team_email.lowercase(),
+        team_name.toLowerCase(),
+        slack_channel.toLowerCase(),
+        team_email.toLowerCase(),
         manager_id,
         product_owner_id
       ],
@@ -135,10 +135,10 @@ const getAllTeams = (request, response) => {
 
 //SEARCH BY NAME - OK
   const getUserByName = (request, response) => {
-    const name = (request.params.name)
+    const name = (request.params.name.toLowerCase())
     console.log(name)
   
-    pool.query("SELECT * FROM user_table WHERE name LIKE '%' || $1 || '%'", [name], (error, results) => {
+    pool.query("SELECT * FROM user_table WHERE name LIKE '%' || $1 || '%'", [name.toLowerCase()], (error, results) => {
       if (error) {
         throw error
       }
@@ -148,10 +148,10 @@ const getAllTeams = (request, response) => {
 
   //SEARCH BY OFFICE_LOCATION -   Ok
   const getUserByOfficeLocation = (request, response) => {
-    const office_location = (request.params.office_location)
+    const office_location = (request.params.office_location.toLowerCase())
     console.log("location: " + office_location)
   
-    pool.query("SELECT * FROM user_table WHERE office_location LIKE '%' || $1 || '%' ", [office_location.lowercase()], (error, results) => {
+    pool.query("SELECT * FROM user_table WHERE office_location LIKE '%' || $1 || '%' ", [office_location.toLowerCase()], (error, results) => {
       if (error) {
         throw error
       }
@@ -161,10 +161,10 @@ const getAllTeams = (request, response) => {
 
   //SEARCH BY BUSINESS_TITLE = OK
   const getUserByBusinessTitle = (request, response) => {
-    const business_title = (request.params.business_title)
+    const business_title = (request.params.business_title.toLowerCase())
     console.log(business_title)
   
-    pool.query("SELECT * FROM user_table WHERE business_title LIKE '%' || $1 || '%'", [business_title.lowercase()], (error, results) => {
+    pool.query("SELECT * FROM user_table WHERE business_title LIKE '%' || $1 || '%'", [business_title.toLowerCase()], (error, results) => {
       if (error) {
         throw error
       }
