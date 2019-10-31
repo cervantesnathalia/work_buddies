@@ -11,11 +11,11 @@ Work Buddies address the following issues a company faces:
 
 - Easily get the contact to an individual and team
 
-![MVP_CANVAS](table_photos/MVP_CANVAS.png)
+![MVP_CANVAS](table_photos/backend/MVP_CANVAS.png)
 
 ![OVERVIEW](table_photos/backend/OVERVIEW.png)
 
-![DATABASE](table_photos/DATABASE.png)
+![DATABASE](table_photos/backend/DATABASE.png)
 
 ![WEBSITE_MAPPING](table_photos/backend/WEBSITE_MAPPING.png)
 
