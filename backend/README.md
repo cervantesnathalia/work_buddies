@@ -11,7 +11,7 @@ Work Buddies address the following issues a company faces:
 
 - Easily get the contact to an individual and team
 
-![MVP_CANVAS](/backend/table_photos/MVP_CANVAS.png)
+![MVP_CANVAS](table_photos/MVP_CANVAS.png)
 
 ![OVERVIEW](table_photos/backend/OVERVIEW.png)
 
