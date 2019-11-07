@@ -3,7 +3,7 @@ import './App.css';
 import Dashboard from './components/dashboard';
 import SearchBar from './components/searchBar';
 import Map from './components/map';
-import MenuDrop from './components/dropMenu';
+
 
 
 
@@ -13,7 +13,6 @@ function App() {
     <Dashboard/>
     <SearchBar/>
     <Map/>
-    {/* <MenuDrop/> */}
     </div>
   );
 }
