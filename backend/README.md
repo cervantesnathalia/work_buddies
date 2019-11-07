@@ -13,11 +13,11 @@ Work Buddies address the following issues a company faces:
 
 ![MVP_CANVAS](table_photos/MVP_CANVAS.png)
 
-![OVERVIEW](table_photos/backend/OVERVIEW.png)
+![OVERVIEW](table_photos/OVERVIEW.png)
 
 ![DATABASE](table_photos/DATABASE.png)
 
-![WEBSITE_MAPPING](table_photos/backend/WEBSITE_MAPPING.png)
+![WEBSITE_MAPPING](table_photos/WEBSITE_MAPPING.png)
 
 ## Installing
 
