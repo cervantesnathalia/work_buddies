@@ -58,7 +58,6 @@ const createUser = (request, response) => {
 };
 
 
-
 //CREATE TEAM - OK
 const createTeam = (request, response) => {
     if (
@@ -117,7 +116,6 @@ const getAllTeams = (request, response) => {
           response.status(200).json(results.rows)
     })
 }
-
   
 
   //SEARCH BY ID - OK
@@ -171,7 +169,6 @@ const getAllTeams = (request, response) => {
       response.status(200).json(results.rows)
     })
   }
-
 
 module.exports = {
   createUser,
