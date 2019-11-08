@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
+import GoogleMap from "./GoogleMap";
 
 const { Content, Sider } = Layout;
 
@@ -13,7 +14,7 @@ class Maps extends Component {
         </Sider>
         <Content style={{ padding: "5px" }}>
           <div style={{marginTop: 10,background: "#616161",minHeight: 550,align: "left"}}>
-            Content
+            <GoogleMap/>
           </div>
         </Content>
       </Layout>

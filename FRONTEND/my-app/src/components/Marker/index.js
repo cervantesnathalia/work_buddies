@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import MarkerStyled from './MarkerStyled';
 import MarkerInGroupStyled from './MarkerInGroupStyled';
 import Ping from '../Ping';
-import Tooltip from '@hig/tooltip';
-import Typography from '@hig/typography';
+// import Tooltip from '@hig/tooltip';
+// import Typography from '@hig/typography';
+import { Tooltip } from 'antd';
 
 class Marker extends React.PureComponent {
   // eslint-disable-line react/prefer-stateless-function
