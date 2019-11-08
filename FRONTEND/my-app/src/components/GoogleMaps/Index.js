@@ -8,7 +8,7 @@ import Marker from '../Marker';
 import ClusterMarker from '../ClusterMarker'; //o que e isso?
 
 import mapStyles from './mapStyles.json';
-import { markersData, center } from '../../fakeData'; //should i import this?
+import { markersData, center } from '../../fakeData'; //eu preciso importar isso
 
 import MapWrapper from './MapWrapper';
 import Surface from "@hig/surface";
