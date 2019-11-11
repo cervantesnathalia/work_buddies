@@ -19,6 +19,8 @@ const styles = {
     },
     formControl: {
         width:'50px',
+        minWidth: 140,
+        marginRight: '5px'
     },
 };
 function SearchBar(props) {
@@ -56,3 +58,10 @@ SearchBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 export default withStyles(styles)(SearchBar);
+
+
+
+
+
+
+
