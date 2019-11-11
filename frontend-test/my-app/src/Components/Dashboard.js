@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TopNavigation from "./TopNavigation";
 import SearchBar from "./SearchBar";
 import SimpleCard from "./SimpleCard"
-// import Maps from "./Maps";
+import Maps from "./Maps";
 
 class Dashboard extends Component {
   //to hold the state and allows another function permission to use this method
@@ -19,7 +19,7 @@ class Dashboard extends Component {
         <TopNavigation />
         <SearchBar />
         <SimpleCard />
-        {/* <Maps /> */}
+        <Maps />
       </div>
     );
   }
