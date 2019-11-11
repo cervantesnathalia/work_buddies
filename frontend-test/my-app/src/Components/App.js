@@ -1,6 +1,12 @@
-import React from 'react';
+import React from "react";
+import Dashboard from "./Dashboard";
 
-export default props =>
-<div>
-  <h1> Hi from React</h1>
-</div>
+function App() {
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
+}
+
+export default App;
