@@ -8,6 +8,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
+
+
 const styles = {
     root: {
         padding: '10px',
@@ -23,8 +25,13 @@ const styles = {
         marginRight: '5px'
     },
 };
+
+
 function SearchBar(props) {
-    const { classes } = props;
+    const { classes, onSearch } = props;
+
+    
+
     return (
         <div style={{marginTop:'25px', margin: '50px 10% 50px 10%'}}>
             <Paper className={classes.root}>
