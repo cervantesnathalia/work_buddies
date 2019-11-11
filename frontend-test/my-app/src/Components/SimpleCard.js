@@ -33,7 +33,7 @@ export default function SimpleCard() {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <div style={{marginTop:'25px', margin: '10px 100% 50px 2%'}}>
+    <div style={{marginTop:'25px', margin: '8px 80% 50px 4%'}}>
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>

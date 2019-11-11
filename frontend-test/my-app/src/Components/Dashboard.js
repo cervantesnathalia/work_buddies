@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import TopNavigation from "./TopNavigation";
 import SearchBar from "./SearchBar";
-import SimpleCard from "./SimpleCard"
+import SimpleCard from "./SimpleCard";
 import Maps from "./Maps";
+import Grid from "@material-ui/core/Grid";
 
 class Dashboard extends Component {
   //to hold the state and allows another function permission to use this method
@@ -18,13 +19,18 @@ class Dashboard extends Component {
       <div>
         <TopNavigation />
         <SearchBar />
-        <SimpleCard />
-        <Maps />
+
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item>
+            <SimpleCard />
+          </Grid>
+          <Grid item>
+            <Maps />
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
 export default Dashboard;
-
-

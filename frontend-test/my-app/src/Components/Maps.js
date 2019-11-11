@@ -8,10 +8,11 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 75,
+    minWidth: 1300,
     padding: '220px',
     borderRadius: '15px',
     height: '40vh',
+
 
   },
   bullet: {
@@ -34,7 +35,8 @@ export default function SimpleCard() {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <div style={{marginTop:'25px', margin: '10px 11% 20px 32%'}}>
+    // <div style={{marginTop:'25px', margin: '10px 100% 50px 2%'}}>
+    <div style={{marginTop:'50px', margin: '10px 50% 50px 1%'}}>
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -51,7 +53,7 @@ export default function SimpleCard() {
           adjective
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
+          map
           <br />
           {'"a benevolent smile"'}
         </Typography>
