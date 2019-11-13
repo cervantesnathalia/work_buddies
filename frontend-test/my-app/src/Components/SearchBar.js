@@ -43,13 +43,13 @@ function SearchBar(props) {
                         id="standard-basic"
                         className={classes.textField}
                         label="Search by name, id, or office location"
-                        margin="small"
+                        margin="normal"
                     />
                     <FormControl className={classes.formControl}>
                         <InputLabel id="drop-down">Type</InputLabel>
                         <Select
                             id="drop-down"
-                            value={"Search"}
+                            value={""}
                             className={classes.drop}
                         >
                             <MenuItem value={"Individual"}>Individual</MenuItem>
