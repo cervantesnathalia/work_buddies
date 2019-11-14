@@ -23,10 +23,11 @@ class Dashboard extends Component {
     return (
       //here going to import all the components and this tag </> says nothing going there
       // this allow the dashboard looks clean
+      // adding this.handleSearch as a prop to the SearchBar 
       <div>
         <TopNavigation />
-        <SearchBar />
-
+        <SearchBar 
+        onSearch = {this.handleSearch}/>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item>
             <SimpleCard />
