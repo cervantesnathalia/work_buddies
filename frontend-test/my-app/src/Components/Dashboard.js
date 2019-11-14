@@ -9,7 +9,14 @@ class Dashboard extends Component {
   //to hold the state and allows another function permission to use this method
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      search: '',
+      type: '',
+    };
+    this.handleSearch= this.handleSearch.bind(this);
+  }
+  handleSearch(search,type){
+    this.setState({search: search, type: type});
   }
 
   render() {
