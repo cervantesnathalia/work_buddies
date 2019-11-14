@@ -1,44 +1,68 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import TopNavigation from "./TopNavigation";
-import SearchBar from "./SearchBar";
-import SimpleCard from "./SimpleCard";
-import Maps from "./Maps";
-import Grid from "@material-ui/core/Grid";
-
+import SearchBar from "./SearchBar"
+import { Grid } from "@material-ui/core";
+import axios from "axios";
+import InfoDisplay from './InfoDisplay';
 class Dashboard extends Component {
-  //to hold the state and allows another function permission to use this method
-  constructor(props) {
-    super(props);
-    this.state = {
-      search: '',
-      type: '',
-    };
-    this.handleSearch= this.handleSearch.bind(this);
-  }
-  handleSearch(search,type){
-    this.setState({search: search, type: type});
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            search: '',
+            type: '',
+            searchResult: []
+        }   ;
+        this.handleSearch= this.handleSearch.bind(this);
+    }
 
-  render() {
-    return (
-      //here going to import all the components and this tag </> says nothing going there
-      // this allow the dashboard looks clean
-      // adding this.handleSearch as a prop to the SearchBar 
-      <div>
-        <TopNavigation />
-        <SearchBar 
-        onSearch = {this.handleSearch}/>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <SimpleCard />
-          </Grid>
-          <Grid item>
-            <Maps />
-          </Grid>
-        </Grid>
-      </div>
-    );
-  }
+    componentDidUpdate(prevProp, prevState){
+
+    }
+
+    handleSearch(search, type) {
+        this.setState({search: search, type: type});
+        if(search === '') {
+
+            // Make a request for a user with a given ID
+            axios.get('/allusers')
+                .then((response) => {
+                    // handle success
+                    console.log(response);
+                    this.setState({searchResult: response.data})
+                })
+                .catch((error) => {
+                    // handle error
+                    console.log(error);
+                })
+        }
+    }
+    render() {
+        return (
+            <div>
+                <TopNavigation/>
+                <SearchBar
+                    onSearch={this.handleSearch}
+                />
+                <Grid container spacing={1} alignItems="flex-end">
+                    <Grid item>
+                        <InfoDisplay
+                            data={this.state.searchResult}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <InfoDisplay
+                          key = {Date.now()}
+                            data={undefined}
+                        />
+                    </Grid>
+                </Grid>
+                {this.state.search ?
+                    <p style={{textColor:'#fff'}}>
+                        {`I searched ${this.state.search} of type ${this.state.type}`}
+                    </p> : "I searched nothing"
+                }
+            </div>
+        );
+    }
 }
-
 export default Dashboard;

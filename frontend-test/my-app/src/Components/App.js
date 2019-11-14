@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Dashboard from "./Dashboard";
 import { Route, Switch } from 'react-router-dom';
-import SimpleCard from "./SimpleCard";
+import SimpleCard from "./InfoDisplay";
+import InfoDisplay from './InfoDisplay';
 
 // import TopNavigation from "./TopNavigation";
 
@@ -22,8 +23,8 @@ class App extends Component {
     const App = () => (
       <div>
         <Switch>
-          <Route exact path='/teams' component={SimpleCard}/>
-          <Route path='/allusers' component={SimpleCard}/>
+          <Route exact path='/teams' component={InfoDisplay}/>
+          <Route path='/allusers' component={InfoDisplay}/>
         </Switch>
       </div>
     )
