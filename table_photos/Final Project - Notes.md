@@ -243,7 +243,7 @@ https://material-ui.com/components/menus/
    OK.  - Function  - Search All Teams
    OK.  - Function  - Search All individuals    
    me   - Function  - Search by Name - Individual
-   me   - Function  - Search by Name - Team   
+   me   - Function  - Search by Location - Individual  
    
    me   - Link all the users to the information of each individual
    me   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
@@ -264,7 +264,7 @@ https://material-ui.com/components/menus/
        - If i Search a lot individuals the box going to get bigger?
        
        
-       - Function  - Search by Location - Individual
+
        - Function  - Search by Business Title - Individual
    ??  -  Maybe implement a button to connect to Gmail to send an email.
 ```
