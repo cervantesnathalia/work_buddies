@@ -6,7 +6,7 @@ import Marker from '../Marker';
 
 import MarkerGroup from './MarkerGroup';
 import MarkerCounter from './MarkerCounter';
-// import Tooltip from "@hig/tooltip";
+import Tooltip from "@hig/tooltip";
 
 class ClusterMarker extends React.PureComponent {
   // eslint-disable-line react/prefer-stateless-function

@@ -31,7 +31,17 @@ export default class API {
         console.log(error);
     })
 }
+static getUserByLocation (setApiData){
+
+    // Make a request for a user with a given name
+    axios.get('/users/name/:location')
+    .then(setApiData)
+    .catch((error) => {
+        // handle error
+        console.log(error);
+    })
+}
 }
 
-// make just 2 more calls - by Individual name and by Team name
+// that's the calls that I'm going to have for the MVP
 

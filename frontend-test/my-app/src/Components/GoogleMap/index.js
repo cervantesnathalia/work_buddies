@@ -9,8 +9,8 @@ import mapStyles from './mapStyles.json';
 import { markersData, center } from '../../fakeData';
 
 import MapWrapper from './MapWrapper';
-// import Surface from "@hig/surface";
-// import Tooltip from "@hig/tooltip";
+import Surface from "@hig/surface";
+import Tooltip from "@hig/tooltip";
 
 const MAP = {
   defaultZoom: 0,
@@ -23,7 +23,8 @@ const MAP = {
 };
 
 export class GoogleMap extends React.PureComponent {
-  // eslint-disable-line react/prefer-stateless-function
+//   eslint-disable-line react/prefer-stateless-function
+
   constructor(props) {
     super(props)
     this.state = {
@@ -46,7 +47,7 @@ export class GoogleMap extends React.PureComponent {
 
     }
     const clusters = supercluster(pings, {
-      // minZoom: 0,
+      minZoom: 0,
       maxZoom: 19,
       radius: 60,
     });
@@ -54,7 +55,7 @@ export class GoogleMap extends React.PureComponent {
     return clusters(this.state.mapOptions);
   };
   componentDidMount() {
-    // this.setState({geoData: this.props.geoData});
+    this.setState({geoData: this.props.geoData});
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
       if (prevState.geoData != this.props.geoData) {
@@ -64,21 +65,21 @@ export class GoogleMap extends React.PureComponent {
   }
 
   matchNameToCoord(coord) {
-    // for (let item of this.state.geoData) {
-    //   if (item.lat === coord.lat && item.lng === coord.lng) {
-    //     return item.name;
-    //   }
-    // }
+    for (let item of this.state.geoData) {
+      if (item.lat === coord.lat && item.lng === coord.lng) {
+        return item.name;
+      }
+    }
     return "Halp!"
   }
 
   matchNamesToCoord(coord) {
     let names = [];
-    // for (let item of this.state.geoData) {
-    //   if (item.lat === coord.lat && item.lng === coord.lng) {
-    //     names.push(item.name);
-    //   }
-    // }
+    for (let item of this.state.geoData) {
+      if (item.lat === coord.lat && item.lng === coord.lng) {
+        names.push(item.name);
+      }
+    }
     return names;
   }
 

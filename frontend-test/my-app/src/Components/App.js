@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import Dashboard from "./Dashboard";
 import { Route, Switch } from 'react-router-dom';
-import SimpleCard from "./InfoDisplay";
-import InfoDisplay from './InfoDisplay';
-
-// import TopNavigation from "./TopNavigation";
-
-// function App() {
-//   return (
-//     <div>
-//       <Dashboard />
-//     </div>
-//   );
-// }
-
-// export default App;
+import InfoDisplay from "./InfoDisplay";
 
 
 
