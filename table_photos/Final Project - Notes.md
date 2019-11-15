@@ -246,6 +246,7 @@ https://material-ui.com/components/menus/
        - Function  - Search by Business Title - Individual
      	 - Function  - Search All Teams
    ok. - Function  - Search All individuals 
+   		 -
        - Link all the users to the information of each individual
        - Show Each Individual - Name, position , email , Oficce Location , Time Zone
          Maybe implement a button to connect to Gmail to send an email.

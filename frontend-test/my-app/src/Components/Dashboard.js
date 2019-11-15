@@ -19,7 +19,7 @@ class Dashboard extends Component {
     }
 
     componentDidUpdate(prevProp, prevState){
-
+       
     }
    
     setApiData(response){
@@ -31,8 +31,11 @@ class Dashboard extends Component {
         this.setState({search: search, type: type});
         if(search === '' && type === "Individual") {
           API.getAllUsers(this.setApiData)
-        }
+        } else if (search === '' && type === "Team"){
+            API.getAllTeams(this.setApiData)          
+         } 
     }
+     
     render() {
         return (
             <div>
@@ -44,6 +47,7 @@ class Dashboard extends Component {
                     <Grid item>
                         <InfoDisplay
                             data={this.state.searchResult}
+                            stype={this.state.type}
                         />
                     </Grid>
                     <Grid item>

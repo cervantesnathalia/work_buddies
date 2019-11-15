@@ -11,4 +11,14 @@ export default class API {
               console.log(error);
           })
     }
+    static getAllTeams(setApiData){
+
+        // Make a request for a user with a given ID
+        axios.get('/teams')
+        .then(setApiData)
+        .catch((error) => {
+            // handle error
+            console.log(error);
+        })
+  }
 }
