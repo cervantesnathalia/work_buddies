@@ -240,24 +240,32 @@ https://material-ui.com/components/menus/
 # Ajustes Finais
 
 ```
-       - Function  - Search by Location - Individual
-       - Function  - Search by Name - Individual
-       - Function  - Search by Name - Team
-       - Function  - Search by Business Title - Individual
-     	 - Function  - Search All Teams
-   ok. - Function  - Search All individuals 
-   		 -
-       - Link all the users to the information of each individual
-       - Show Each Individual - Name, position , email , Oficce Location , Time Zone
-         Maybe implement a button to connect to Gmail to send an email.
+   OK.  - Function  - Search All Teams
+   OK.  - Function  - Search All individuals    
+   me   - Function  - Search by Name - Individual
+   me   - Function  - Search by Name - Team   
+   
+   me   - Link all the users to the information of each individual
+   me   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
+   me   - Function to show the Map
+       
+
          
-       - Function to show the Map
+       - Change the user table putting lat and long there   
+         
+     
        
        - OAuth with Postgres - Login Page
        
        - Deploy
 
 
+
        - If i Search a lot individuals the box going to get bigger?
+       
+       
+       - Function  - Search by Location - Individual
+       - Function  - Search by Business Title - Individual
+   ??  -  Maybe implement a button to connect to Gmail to send an email.
 ```
 
