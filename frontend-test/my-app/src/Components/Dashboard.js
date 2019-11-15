@@ -4,6 +4,8 @@ import SearchBar from "./SearchBar"
 import { Grid } from "@material-ui/core";
 import axios from "axios";
 import InfoDisplay from './InfoDisplay';
+import API from "../DataService/DataService"
+
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -13,27 +15,22 @@ class Dashboard extends Component {
             searchResult: []
         }   ;
         this.handleSearch= this.handleSearch.bind(this);
+        this.setApiData = this.setApiData.bind(this);
     }
 
     componentDidUpdate(prevProp, prevState){
 
     }
+   
+    setApiData(response){
+      this.setState({searchResult: response.data})
+      console.log(response)
+    }
 
     handleSearch(search, type) {
         this.setState({search: search, type: type});
-        if(search === '') {
-
-            // Make a request for a user with a given ID
-            axios.get('/allusers')
-                .then((response) => {
-                    // handle success
-                    console.log(response);
-                    this.setState({searchResult: response.data})
-                })
-                .catch((error) => {
-                    // handle error
-                    console.log(error);
-                })
+        if(search === '' && type === "Individual") {
+          API.getAllUsers(this.setApiData)
         }
     }
     render() {

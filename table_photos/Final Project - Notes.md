@@ -232,3 +232,31 @@ to run - nodemon index.js
 https://codesandbox.io/s/semantic-ui-example-uxbe9 example for drop
 
 https://material-ui.com/components/menus/
+
+
+
+
+
+# Ajustes Finais
+
+```
+       - Function  - Search by Location - Individual
+       - Function  - Search by Name - Individual
+       - Function  - Search by Name - Team
+       - Function  - Search by Business Title - Individual
+     	 - Function  - Search All Teams
+   ok. - Function  - Search All individuals 
+       - Link all the users to the information of each individual
+       - Show Each Individual - Name, position , email , Oficce Location , Time Zone
+         Maybe implement a button to connect to Gmail to send an email.
+         
+       - Function to show the Map
+       
+       - OAuth with Postgres - Login Page
+       
+       - Deploy
+
+
+       - If i Search a lot individuals the box going to get bigger?
+```
+
