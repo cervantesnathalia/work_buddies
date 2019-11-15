@@ -25,7 +25,7 @@ Connect to postgres - psql postgres
 ```
 
 ```
-List all db  - list 
+List all db  - \l
 ```
 
 ```
@@ -45,9 +45,12 @@ username VARCHAR (50) UNIQUE NOT NULL,
 password VARCHAR (50) NOT NULL,
 name VARCHAR (50)  NOT NULL, 
 office_location VARCHAR (50) NOT NULL, 
+latitude double precision NOT NULL,
+longitude double precision NOT NULL,
 slack_name VARCHAR (50) NOT NULL, 
 work_email VARCHAR (355) UNIQUE NOT NULL, 
-business_title VARCHAR (50)  NOT NULL);
+business_title VARCHAR (50)  NOT NULL)
+;
 ```
 
 
@@ -67,19 +70,18 @@ product_owner_id INTEGER REFERENCES user_table(id));
 CREATE USER - INSERT INTO - user_table
 
 ```sql
-INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title) VALUES('naty', 321456,'Nathalia','San Francisco', 'Nathalia', 'araujo.nathalia03@gmail.com', 'Software Engineer');
+INSERT INTO user_table(username,password,name,office_location, latitude, longitude, slack_name,work_email,business_title) VALUES('naty', 321456,'Nathalia','San Francisco', 37.791030, -122.394760, 'Nathalia', 'araujo.nathalia03@gmail.com', 'Software Engineer');
   
-INSERT INTO   user_table(username,password,name,office_location,slack_name,work_email,business_title) VALUES('nina', 43215678,'Nina Policastro','Brazil', 'Nina Policastro', 'ninapolicatro@gmail.com', 'Manager');
+INSERT INTO   user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('nina', 43215678,'Nina Policastro','Brazil', -14.235004, -51.925282, 'Nina Policastro', 'ninapolicatro@gmail.com', 'Manager');
 
-INSERT INTO user_table(id,username,password,name,office_location,slack_name,work_email,business_title) VALUES( 3,'freddy', 01010101,'Freddy Cervantes','Mexico', 'Freddy Cervantes', 'freddycervantes@gmail.com', 'Product Owner');
+  INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('freddy', 01010101,'Freddy Cervantes','Mexico', 23.634501, -102.552788, 'Freddy Cervantes', 'freddycervantes@gmail.com', 'Product Owner');
 
-INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title) VALUES( 'Flavia', 01010232,'Flavia','Spain', 'Flavia Deplachet', 'flavia@gmail.com', 'Manager');
+INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES( 'Flavia', 01010232,'Flavia','Spain',40.463669, -3.749220, 'Flavia Deplachet', 'flavia@gmail.com', 'Manager');
 
 
+INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('bia', 32145678,'Beatriz Guerra','Texas', 31.968599, -99.901810, 'Bia', 'bia@gmail.com', 'Software Engineer');
 
-INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title) VALUES('bia', 32145678,'Beatriz Guerra','Texas', 'Bia', 'bia@gmail.com', 'Software Engineer');
-
-INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title) VALUES( 'maria regina', 01010101,'Maria Regina','Canada', 'Maria Regina', 'mariaregina@gmail.com', 'Software Engineer');
+INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES( 'maria regina', 01010101,'Maria Regina','Canada', 56.130367, -106.346771, 'Maria Regina', 'mariaregina@gmail.com', 'Software Engineer');
 ```
 
 
@@ -132,8 +134,9 @@ INSERT INTO user_table(username,password,name,office_location,slack_name,work_em
 ##CREATE NEW TEAM
 
 ```sql
-INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' Sale Gurus', '#gurus_team', 'sales_gurus@gmail.com' , 2,3 );
+INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' Sale Gurus', '#gurus_team', 'sales_gurus@gmail.com' , 4,3 );
   
+INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' Ninja', '#ninjas', 'ninjas@gmail.com' , 2,3 );
 ```
 
 ##SEARCH ALL TEAMS
@@ -237,34 +240,33 @@ https://material-ui.com/components/menus/
 
 
 
+
+
+https://frontendmasters.com/courses/testing-javascript/
+
+
+
 # Ajustes Finais
 
 ```
    OK.  - Function  - Search All Teams
-   OK.  - Function  - Search All individuals    
+   OK.  - Function  - Search All individuals  
+   OK.  - Change the user table putting lat and long there 
+   
    me   - Function  - Search by Name - Individual
    me   - Function  - Search by Location - Individual  
-   
    me   - Link all the users to the information of each individual
    me   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
    me   - Function to show the Map
-       
-
-         
-       - Change the user table putting lat and long there   
-         
-     
-       
+          
+           
        - OAuth with Postgres - Login Page
        
        - Deploy
-
-
-
-       - If i Search a lot individuals the box going to get bigger?
+  
+    
        
-       
-
+     - If i Search a lot individuals the box going to get bigger?
        - Function  - Search by Business Title - Individual
    ??  -  Maybe implement a button to connect to Gmail to send an email.
 ```
