@@ -16,6 +16,7 @@ window.setState = (changes) => {
     ), document.getElementById('root'));
 }
 
+/* eslint no-restricted-globals: 0 */
 let initialState = {
     name: "Joel",
     location: location.pathname.replace(/^\/?|\/$/g,"")
