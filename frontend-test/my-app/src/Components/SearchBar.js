@@ -34,10 +34,16 @@ function SearchBar(props) {
     //Create type variable and search variable
     const [type,setType] = React.useState(''); 
     const [search,setSearch] = React.useState('');
+    const [isAvaiable,setisAvaiable] = React.useState(false);
 
-    //Set value of type to event value
+    //Set value of type to event value and if its avaiable or disable
     const handleDropChange = event => {
         setType(event.target.value);
+        if( event.target.value == "Individual"){
+            setisAvaiable(false);
+        } else{
+            setisAvaiable(true);
+        }
     }
     //Calls handleSearch of Dashboard.js
     const handleButtonClick = event => {
@@ -58,11 +64,12 @@ function SearchBar(props) {
                     <TextField
                         id="standard-basic"
                         className={classes.textField}
-                        label="Search by name, id, or office location"
+                        label="Search by name or office location"
                         margin="normal"
                         value ={search}
                         onChange={handleSearchChange}
                         fullWidth
+                        disabled={isAvaiable}
                     />
                     <FormControl className={classes.formControl}>
                         <InputLabel id="drop-down">Type</InputLabel>

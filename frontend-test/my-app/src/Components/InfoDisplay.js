@@ -19,10 +19,7 @@ export default function InfoDisplay(props) {
     console.log(data);
     if (data !== undefined) {
         console.log(stype)
-        if (stype === "Individual") {
-            // if (stype === "Individual" && value.name === ''){
-
-            
+        if (stype === "Individual") {          
             return (
                 <div style={{ margin: "20px 25px 20px 25px" }}>
                     <Card className={classes.card}>

@@ -13,7 +13,7 @@ class Dashboard extends Component {
             search: '',
             type: '',
             searchResult: []
-        }   ;
+        };
         this.handleSearch= this.handleSearch.bind(this);
         this.setApiData = this.setApiData.bind(this);
     }
