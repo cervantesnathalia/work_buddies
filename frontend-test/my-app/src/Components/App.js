@@ -22,22 +22,21 @@ class App extends Component {
 
     }  
 
-    const App = () => (
-      <div>
+    return (
+        <div className= "App">
+    
+   
         <Switch>
           <Route exact path='/teams' component={InfoDisplay}/>
           <Route path='/allusers' component={InfoDisplay}/>
-          <Route path='/main' component = {Main}/>
+          <Route path='/secret' component = {Dashboard}/>
+          <Route path='' component = {Main}/>
         </Switch>
-      </div>
+        </div>
     )
-    return (
-      <Switch>
-        <Dashboard/>
-        <Main/>
-      </Switch>
-    );
   }
 }
 
-export default App;
+    export default App;
+
+

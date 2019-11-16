@@ -5,7 +5,7 @@ class Main extends Component {
     render() { 
         return ( 
             <div>
-                This is the Main Page
+                This is the Main PAge - login
             </div>
          );
     }
