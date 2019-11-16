@@ -253,7 +253,7 @@ https://frontendmasters.com/courses/testing-javascript/x
    OK.  - Function  - Search All individuals  
    OK.  - Change the user table putting lat and long there 
    
-   me   - Function  - Search by Name - Individual
+   ok   - Function  - Search by Name - Individual
    me   - Function  - Search by Location - Individual  
    me   - Link all the users to the information of each individual
    me   - Show Each Individual - Name, position , email , Oficce Location , Time Zone

@@ -21,26 +21,28 @@ export default class API {
             console.log(error);
           })
     }
-    static getUserByName (setApiData){
-
-    // Make a request for a user with a given name
-          axios.get('/users/name/:name')
-          .then(setApiData)
-          .catch((error) => {
-          // handle error
-          console.log(error);
+/* Search user by location */
+static getUserByLocation(office_location, setApiData) {
+    console.log(`Searching by location ${office_location} ...`);
+    axios.get(`/users/location/${office_location}`)
+        .then(setApiData)
+        .catch((error) => {
+            // handle error
+            console.log("Inside error");
+            console.log(error);
         })
-    }
-    static getUserByLocation (setApiData){
-
-    // Make a request for a user with a given name
-          axios.get('/users/name/:location')
-          .then(setApiData)
-          .catch((error) => {
-          // handle error
-          console.log(error);
+}
+/* Search user by name */
+static getUserByName(name, setApiData) {
+    console.log(`Searching by name ${name} ...`);
+    axios.get(`/users/name/${name}`)
+        .then(setApiData)
+        .catch((error) => {
+            // handle error
+            console.log("Inside error");
+            console.log(error);
         })
-    }
+}
 }
 
 // that's the calls that I'm going to have for the MVP
