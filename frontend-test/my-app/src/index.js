@@ -13,7 +13,7 @@ window.setState = (changes) => {
 
     ReactDOM.render((
         <BrowserRouter>
-            <App/>
+            <App {...state}/>
         </BrowserRouter>
     ), document.getElementById('root'));
 }

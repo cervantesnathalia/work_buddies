@@ -6,7 +6,7 @@ class Main extends Component {
     render() { 
         return ( 
             <div>
-                Hello {this.props.name} This is the Main PAge - login
+                Hello {this.props.name} This is the Main Page - login
             </div>
          );
     }

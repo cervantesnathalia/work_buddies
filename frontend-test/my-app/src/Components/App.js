@@ -15,16 +15,17 @@ class App extends Component {
     let mainComponent = "";
     switch(this.props.location){
         case "":
-            mainComponent = <Main />;
+            mainComponent = <Main {...this.props}/>;
             break;
     
         case 'callback':
             mainComponent = <Callback />;
+            break;
 
         case "secret":
             mainComponent = <Dashboard/>;
-
             break;
+
         default:
             mainComponent = <Main /> 
 
@@ -32,13 +33,13 @@ class App extends Component {
 
     return (
         <div className= "App">
-        <Switch>
+        {/* <Switch>
           <Route exact path='/teams' component={InfoDisplay}/>
           <Route path='/allusers' component={InfoDisplay}/>
           <Route path='/secret' component = {Dashboard}/>
           < Route path= '/callback' component= {Callback}/>
-          <Route path='' component = {Main}/>
-        </Switch>
+        </Switch> */}
+        {mainComponent}
         </div>
     )
   }
