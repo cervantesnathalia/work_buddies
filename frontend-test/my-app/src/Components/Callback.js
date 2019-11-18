@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 
-
-class Main extends Component {
+class Callback extends Component {
     state = {  }
     render() { 
         return ( 
             <div>
-                Hello {this.props.name} This is the Main PAge - login
+                Loading....
             </div>
          );
     }
 }
  
-export default Main;
+export default Callback;

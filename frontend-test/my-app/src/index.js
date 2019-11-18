@@ -5,6 +5,8 @@ import App from './Components/App'
 import ReactDOM from 'react-dom'
 import serviceWorker from './serviceWorker';
 
+
+
 let state = {};
 window.setState = (changes) => {
     state = Object.assign({}, state, changes);
@@ -18,7 +20,7 @@ window.setState = (changes) => {
 
 /* eslint no-restricted-globals: 0 */
 let initialState = {
-    name: "Joel",
+    name: "Naty",
     location: location.pathname.replace(/^\/?|\/$/g,"")
 }
 

@@ -49,8 +49,6 @@ export default function InfoDisplay(props) {
                                         <p><b>Business title: </b> {value.business_title}</p>
                                         <p><b>Slack Name: </b> {value.slack_name}</p>
                                         <p><b>Email: </b> {value.work_email}</p>
-
-                                        
                                     </div>
                                 );
                             })}

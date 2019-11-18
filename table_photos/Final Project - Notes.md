@@ -252,22 +252,21 @@ https://frontendmasters.com/courses/testing-javascript/x
    OK.  - Function  - Search All Teams
    OK.  - Function  - Search All individuals  
    OK.  - Change the user table putting lat and long there 
+   OK   - Function  - Search by Name - Individual
+   OK   - Function  - Search by Location - Individual 
+   OK   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
    
-   ok   - Function  - Search by Name - Individual
-   me   - Function  - Search by Location - Individual  
+ 	 me   - fix the capslock search .... to doesnt matter how is write need to find 
    me   - Link all the users to the information of each individual
-   me   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
-   me   - Function to show the Map
+	 me   - Link all the teams to the information of each Team
+   me   - Function to show the Map - Time Zone 
           
-           
+          
+          
        - OAuth with Postgres - Login Page
        
        - Deploy
   
-    
-       
-     - If i Search a lot individuals the box going to get bigger?
-       - Function  - Search by Business Title - Individual
    ??  -  Maybe implement a button to connect to Gmail to send an email.
 ```
 

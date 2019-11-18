@@ -3,6 +3,9 @@ import Dashboard from "./Dashboard";
 import { Route, Switch } from 'react-router-dom';
 import InfoDisplay from "./InfoDisplay";
 import Main from "./Main";
+import Callback from './Callback';
+
+
 
 
 
@@ -14,8 +17,13 @@ class App extends Component {
         case "":
             mainComponent = <Main />;
             break;
+    
+        case 'callback':
+            mainComponent = <Callback />;
+
         case "secret":
-            mainComponent = <Dashboard />;
+            mainComponent = <Dashboard/>;
+
             break;
         default:
             mainComponent = <Main /> 
@@ -24,12 +32,11 @@ class App extends Component {
 
     return (
         <div className= "App">
-    
-   
         <Switch>
           <Route exact path='/teams' component={InfoDisplay}/>
           <Route path='/allusers' component={InfoDisplay}/>
           <Route path='/secret' component = {Dashboard}/>
+          < Route path= '/callback' component= {Callback}/>
           <Route path='' component = {Main}/>
         </Switch>
         </div>
