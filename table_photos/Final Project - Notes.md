@@ -45,8 +45,8 @@ username VARCHAR (50) UNIQUE NOT NULL,
 password VARCHAR (50) NOT NULL,
 name VARCHAR (50)  NOT NULL, 
 office_location VARCHAR (50) NOT NULL, 
-latitude double precision NOT NULL,
-longitude double precision NOT NULL,
+lat double precision NOT NULL,
+lng double precision NOT NULL,
 slack_name VARCHAR (50) NOT NULL, 
 work_email VARCHAR (355) UNIQUE NOT NULL, 
 business_title VARCHAR (50)  NOT NULL)
@@ -70,18 +70,18 @@ product_owner_id INTEGER REFERENCES user_table(id));
 CREATE USER - INSERT INTO - user_table
 
 ```sql
-INSERT INTO user_table(username,password,name,office_location, latitude, longitude, slack_name,work_email,business_title) VALUES('naty', 321456,'Nathalia','San Francisco', 37.791030, -122.394760, 'Nathalia', 'araujo.nathalia03@gmail.com', 'Software Engineer');
+INSERT INTO user_table(username,password,name,office_location, lat, lng, slack_name,work_email,business_title) VALUES('naty', 321456,'nathalia cervantes','san francisco', 37.791030, -122.394760, 'nathalia', 'araujo.nathalia03@gmail.com', 'software engineer');
   
-INSERT INTO   user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('nina', 43215678,'Nina Policastro','Brazil', -14.235004, -51.925282, 'Nina Policastro', 'ninapolicatro@gmail.com', 'Manager');
+INSERT INTO   user_table(username,password,name,office_location,lat, lng,slack_name,work_email,business_title) VALUES('nina', 43215678,'nina policastro','brazil', -14.235004, -51.925282, 'nina policastro', 'ninapolicatro@gmail.com', 'manager');
 
-  INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('freddy', 01010101,'Freddy Cervantes','Mexico', 23.634501, -102.552788, 'Freddy Cervantes', 'freddycervantes@gmail.com', 'Product Owner');
+  INSERT INTO user_table(username,password,name,office_location,lat, lng,slack_name,work_email,business_title) VALUES('freddy', 01010101,'freddy cervantes','mexico', 23.634501, -102.552788, 'freddy cervantes', 'freddycervantes@gmail.com', 'product owner');
 
-INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES( 'Flavia', 01010232,'Flavia','Spain',40.463669, -3.749220, 'Flavia Deplachet', 'flavia@gmail.com', 'Manager');
+INSERT INTO user_table(username,password,name,office_location,lat, lng,slack_name,work_email,business_title) VALUES( 'flavia', 01010232,'flavia deplachet','spain',40.463669, -3.749220, 'flavia deplachet', 'flavia@gmail.com', 'manager');
 
 
-INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES('bia', 32145678,'Beatriz Guerra','Texas', 31.968599, -99.901810, 'Bia', 'bia@gmail.com', 'Software Engineer');
+INSERT INTO user_table(username,password,name,office_location,lat, lng,slack_name,work_email,business_title) VALUES('bia', 32145678,'beatriz guerra','texas', 31.968599, -99.901810, 'bia', 'bia@gmail.com', 'software engineer');
 
-INSERT INTO user_table(username,password,name,office_location,latitude, longitude,slack_name,work_email,business_title) VALUES( 'maria regina', 01010101,'Maria Regina','Canada', 56.130367, -106.346771, 'Maria Regina', 'mariaregina@gmail.com', 'Software Engineer');
+INSERT INTO user_table(username,password,name,office_location,lat, lng,slack_name,work_email,business_title) VALUES( 'maria regina', 01010101,'maria regina','canada', 56.130367, -106.346771, 'regina pereira', 'mariaregina@gmail.com', 'software engineer');
 ```
 
 
@@ -124,7 +124,7 @@ the user never runs the SQL query directly - you will run it from your code, so 
 ```sql
 SELECT team_id FROM team_table WHERE team_name LIKE '%Guru%'
 
-INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title, team_id) VALUES('romulo', 240304,'Romulo Araujo','China', 'romulo', 'romulo_araujo@gmail.com', 'Software Engineer',team_id);
+INSERT INTO user_table(username,password,name,office_location,slack_name,work_email,business_title, team_id) VALUES('romulo', 240304,'romulo araujo','china', 'romulo', 'romulo_araujo@gmail.com', 'software Engineer',team_id);
 ```
 
 
@@ -134,7 +134,7 @@ INSERT INTO user_table(username,password,name,office_location,slack_name,work_em
 ##CREATE NEW TEAM
 
 ```sql
-INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' Sale Gurus', '#gurus_team', 'sales_gurus@gmail.com' , 4,3 );
+INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' sale gurus', '#gurus_team', 'sales_gurus@gmail.com' , 4,3 );
   
 INSERT INTO team_table(team_name, slack_channel,team_email, manager_id, product_owner_id) VALUES(' Ninja', '#ninjas', 'ninjas@gmail.com' , 2,3 );
 ```
@@ -256,14 +256,13 @@ https://frontendmasters.com/courses/testing-javascript/x
    OK   - Function  - Search by Location - Individual 
    OK   - Show Each Individual - Name, position , email , Oficce Location , Time Zone
    
- 	 me   - fix the capslock search .... to doesnt matter how is write need to find 
-   me   - Link all the users to the information of each individual
-	 me   - Link all the teams to the information of each Team
+ 	 OK   - fix the capslock search .... to doesnt matter how is write need to find 
+   OK   - Link all the users to the information of each individual
    me   - Function to show the Map - Time Zone 
           
           
           
-       - OAuth with Postgres - Login Page
+    + ou -   - OAuth with Postgres - Login Page
        
        - Deploy
   
