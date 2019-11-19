@@ -4,6 +4,9 @@ import './index.css';
 import App from './Components/App'
 import ReactDOM from 'react-dom'
 import serviceWorker from './serviceWorker';
+import Auth from "./Auth";
+
+const auth = new Auth();
 
 
 
@@ -13,7 +16,7 @@ window.setState = (changes) => {
 
     ReactDOM.render((
         <BrowserRouter>
-            <App {...state}/>
+            <App {...state} logout/>
         </BrowserRouter>
     ), document.getElementById('root'));
 }
@@ -21,9 +24,10 @@ window.setState = (changes) => {
 /* eslint no-restricted-globals: 0 */
 let initialState = {
     name: "Naty",
-    location: location.pathname.replace(/^\/?|\/$/g,"")
+    location: location.pathname.replace(/^\/?|\/$/g,""),
+    auth
 }
 
 window.setState(initialState)
 
-serviceWorker();
+serviceWorker(); 

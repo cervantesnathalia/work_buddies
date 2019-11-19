@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import InfoDisplay from "./InfoDisplay";
 import Main from "./Main";
 import Callback from './Callback';
-
+import NotFound from './NotFound';
 
 
 
@@ -23,11 +23,12 @@ class App extends Component {
             break;
 
         case "secret":
-            mainComponent = <Dashboard/>;
+            // mainComponent = this.props.auth.isAuthenticated() ? <Dashboard/> : <NotFound/>;
+            mainComponent = <Dashboard {...this.props}/> ;
             break;
 
         default:
-            mainComponent = <Main /> 
+            mainComponent = <NotFound /> 
 
     }  
 

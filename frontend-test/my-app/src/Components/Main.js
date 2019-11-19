@@ -6,10 +6,15 @@ class Main extends Component {
     render() { 
         return ( 
             <div>
-                Hello {this.props.name} This is the Main Page - login
+                Hello {this.props.name} This is the Main Login Page
+                Do you want to see the secret area ? <a href="/secret"> Click Here </a>
+            <div>
+                <hr/>
+                <button onClick={ this.props.auth.login}>Login</button>
+            </div>
             </div>
          );
     }
 }
  
-export default Main;
+export default Main;   

@@ -130,7 +130,7 @@ export class GoogleMap extends React.PureComponent {
             options={MAP.options}
             onChange={this.handleMapChange}
             yesIWantToUseGoogleMapApiInternals
-            bootstrapURLKeys={{ key: 'AIzaSyCnIlil19N8uYUH2TV0lQRxBpfv82lTpJQ' }}
+            bootstrapURLKeys={{ key: 'AIzaSyBAVa1tMJT6RuCDAiyYZGCVTFTE7VZXuaM ' }}
           >
             {this.state.clusters.map(item => {
               if (item.numPoints === 1) {

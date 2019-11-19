@@ -50,7 +50,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <TopNavigation/>
+                <TopNavigation {...this.props}/>
                 <SearchBar
                     onSearch={this.handleSearch}
                 />
