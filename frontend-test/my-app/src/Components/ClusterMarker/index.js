@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
-
 import Marker from '../Marker';
-
 import MarkerGroup from './MarkerGroup';
 import MarkerCounter from './MarkerCounter';
-import Tooltip from "@hig/tooltip";
+import { Tooltip } from '@material-ui/core';
+
 
 class ClusterMarker extends React.PureComponent {
-  // eslint-disable-line react/prefer-stateless-function
   state = {
     clusterFaceMarkers: this.props.points.slice(0, 2),
   };
@@ -31,7 +29,7 @@ class ClusterMarker extends React.PureComponent {
         )}
         {this.props.points.length > 2 &&
           <MarkerCounter>
-            +{this.props.points.length - 2}
+            {this.props.points.length - 2}
           </MarkerCounter>}
       </MarkerGroup>
     );
