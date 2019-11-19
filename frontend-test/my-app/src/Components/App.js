@@ -5,6 +5,7 @@ import InfoDisplay from "./InfoDisplay";
 import Main from "./Main";
 import Callback from './Callback';
 import NotFound from './NotFound';
+import "../App.css"
 
 
 
