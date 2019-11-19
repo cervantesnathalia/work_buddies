@@ -13,17 +13,16 @@ import { IconButton } from '@material-ui/core';
 
 const styles = {
     root: {
-        padding: '10px',
         borderRadius: '50px',
     },
     textField: {
-        marginLeft: '10px',
-        width: '90%',
+        marginLeft: '30px',
     },
     formControl: {
-        width:'50px',
+        paddingTop: "7px",
+        width:'60px',
         minWidth: 140,
-        marginRight: '5px'
+        marginRight: '2px'
     },
 };
 
@@ -58,9 +57,6 @@ function SearchBar(props) {
         <div style={{marginTop:'25px', margin: '50px 10% 50px 10%'}}>
             <Paper className={classes.root}>
                 <div style={{display: 'flex', alignItems: 'center'}}>
-                    <SearchIcon
-                        style={{ fontSize: 25 }}
-                    />
                     <TextField
                         id="standard-basic"
                         className={classes.textField}
@@ -85,11 +81,12 @@ function SearchBar(props) {
                     </FormControl>
                     <IconButton
                         onClick= {handleButtonClick}
-                        >
-                            <SearchIcon
-                            style={{ fonts:25}}
-                            />
-                        </IconButton>
+                        style={{marginRight: '5px'}}
+                    >
+                        <SearchIcon
+                        style={{ fonts:25}}
+                        />
+                    </IconButton>
                 </div>
             </Paper>
         </div>
