@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -20,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function TopNavigation(props) {
+export default function TopNavigation() {
   const classes = useStyles();
 
   return (
@@ -33,8 +32,7 @@ export default function TopNavigation(props) {
           <Typography variant="h6" className={classes.title}>
             Work Buddies
           </Typography>
-          <Button color="inherit" onClick={props.auth.logout}>Sign out</Button>
-          {/* onClick={this.props.auth.logout} */}
+          <Button color="inherit">Sign out</Button>
         </Toolbar>
       </AppBar>
     </div>
