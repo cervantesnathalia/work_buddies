@@ -6,13 +6,18 @@ class AllTeams extends Component {
     render() {
         let { data } = this.props;
         return (
-            <Typography>
+           
+            <h1>
                 {data.map((value, index) => {
+                    
                     return <p key={index}>{util.capital_letter(value.team_name)}</p>;
                 })}
-            </Typography>
+            </h1>
         );
     }
 }
 
 export default AllTeams;
+
+
+

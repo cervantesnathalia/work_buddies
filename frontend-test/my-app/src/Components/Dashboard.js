@@ -104,37 +104,28 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <TopNavigation {...this.props}/>
+                <TopNavigation/>
                 <SearchBar
                     onSearch={this.handleSearch}
                 />
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item xs={4} sm={4}>
-                        <InfoDisplay
-                            {...this.state}
-                            data={this.state.searchResult}
-                            stype={this.state.type}
-                            search={this.handleSearch}
-                            button={this.meetButtonClick}
-                        />
-                    </Grid>
-                    <Grid item xs={8} sm={8}>
-                    <GoogleMap
+                <div style={{marginLeft:"20px", marginRight:"40px"}}>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item xs={4} sm={4}>
+                            <InfoDisplay
+                                {...this.state}
+                                search={this.handleSearch}
+                                button={this.meetButtonClick}
+                            />
+                        </Grid>
+                        <Grid item xs={8} sm={8}>
+                            <GoogleMap
                                 key={this.state.searchResult}
                                 markersData={this.state.searchResult}
                                 search={this.handleSearch}
                             />
-                        <InfoDisplay
-                          key = {Date.now()}
-                            data={undefined}
-                        />
+                        </Grid>
                     </Grid>
-                </Grid>
-                {this.state.search ?
-                    <p style={{textColor:'#fff'}}>
-                        {`I searched ${this.state.search} of type ${this.state.type}`}
-                    </p> : "I searched nothing"
-                }
+                </div>
             </div>
         );
     }

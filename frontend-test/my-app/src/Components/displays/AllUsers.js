@@ -7,7 +7,7 @@ class AllUsers extends Component {
         let { data } = this.props;
 
         return (
-            <Typography>
+            <div>
                 {data.map((value, index) => {
                     return (
                         <div key={index}>
@@ -21,7 +21,7 @@ class AllUsers extends Component {
                         </div>
                     );
                 })}
-            </Typography>
+            </div>
         );
     }
 }

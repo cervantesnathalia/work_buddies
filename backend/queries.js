@@ -133,10 +133,10 @@ const getAllTeams = (request, response) => {
 
 //SEARCH BY NAME - OK
   const getUserByName = (request, response) => {
-    const name = (request.params.name)
+    const name = (request.params.name.toLowerCase())
     console.log(name)
   
-    pool.query("SELECT * FROM user_table WHERE name LIKE '%' || $1 || '%'", [name], (error, results) => {
+    pool.query("SELECT * FROM user_table WHERE name LIKE '%' || $1 || '%'", [name.toLowerCase()], (error, results) => {
       if (error) {
         throw error
       }
@@ -146,10 +146,10 @@ const getAllTeams = (request, response) => {
 
   //SEARCH BY OFFICE_LOCATION -   Ok
   const getUserByOfficeLocation = (request, response) => {
-    const office_location = (request.params.office_location)
+    const office_location = (request.params.office_location.toLowerCase())
     console.log("location: " + office_location)
   
-    pool.query("SELECT * FROM user_table WHERE office_location LIKE '%' || $1 || '%' ", [office_location], (error, results) => {
+    pool.query("SELECT * FROM user_table WHERE office_location LIKE '%' || $1 || '%' ", [office_location.toLowerCase()], (error, results) => {
       if (error) {
         throw error
       }

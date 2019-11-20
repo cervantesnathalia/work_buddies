@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import auth0 from "auth0-js";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function TopNavigation() {
+export default function TopNavigation(props) {
   const classes = useStyles();
 
   return (
@@ -32,7 +33,8 @@ export default function TopNavigation() {
           <Typography variant="h6" className={classes.title}>
             Work Buddies
           </Typography>
-          <Button color="inherit">Sign out</Button>
+          <Button color="inherit" >Sign out</Button>
+          {/* onClick={this.props.auth.logout} */}
         </Toolbar>
       </AppBar>
     </div>
