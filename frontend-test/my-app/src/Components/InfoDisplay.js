@@ -5,6 +5,7 @@ import NoData from "./displays/NoData";
 import AllUsers from "./displays/AllUsers";
 import User from "./displays/User";
 import AllTeams from "./displays/AllTeams";
+import Team from "./displays/Team";
 
 class InfoDisplay extends Component {
     pickDisplay(data, type, props=undefined) {
@@ -13,7 +14,8 @@ class InfoDisplay extends Component {
                 if (data.length > 1) return (<AllUsers data={data} search={this.props.search}/>);
                 return (<User {...props}/>);
             case "Team":
-                return (<AllTeams data={data}/>);
+                if (data.length > 1) return (<AllTeams data={data} search={this.props.search}/>);
+                return (<Team data={data}/>);
             default:
                 return (<NoData/>);
         }

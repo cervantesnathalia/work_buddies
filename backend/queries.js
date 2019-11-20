@@ -144,6 +144,29 @@ const getAllTeams = (request, response) => {
     })
   }
 
+  //SEARCH TEAM BY NAME - OK
+  const getTeamByName = (request, response) => {
+    const name = (request.params.name.toLowerCase())
+    console.log(name)
+
+    pool.query('SELECT team.team_name, team.slack_channel, team.team_email, manager.name as manager_name, product_owner.name as product_owner_name FROM team_table as team LEFT JOIN user_table as manager ON team.manager_id = manager.id LEFT JOIN user_table as product_owner ON team.product_owner_id = product_owner.id WHERE team.team_name = $1', [name.toLowerCase()], (error, results) => {
+        if (error) {
+        throw error 
+        }
+
+        response.status(200).json(results.rows)
+        console.log(results.rows)
+     })
+    // pool.query("SELECT * FROM team_table WHERE team_name LIKE '%' || $1 || '%'", [name.toLowerCase()], (error, results) => {
+    //   if (error) {
+    //     throw error 
+    //   }
+     
+    //   response.status(200).json(results.rows)
+    //   console.log(results.rows)
+    // })
+  }
+
   //SEARCH BY OFFICE_LOCATION -   Ok
   const getUserByOfficeLocation = (request, response) => {
     const office_location = (request.params.office_location.toLowerCase())
@@ -178,6 +201,7 @@ module.exports = {
   getAllUsers,
   getUserByOfficeLocation,
   getUserByBusinessTitle,
-  getAllTeams
+  getAllTeams,
+  getTeamByName
 };
 

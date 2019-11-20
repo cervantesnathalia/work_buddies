@@ -51,6 +51,18 @@ export default class API {
             })
     }
 
+      /* Search team by name */
+      static getTeamByName(team_name, setApiData) {
+        console.log(`Searching by name ${team_name} ...`);
+        axios.get(`/teams/name/${team_name.toLowerCase()}`)
+            .then(setApiData)
+            .catch((error) => {
+                // handle error
+                console.log("Inside error");
+                console.log(error);
+            })
+    }
+
     static getGeoCoordinates(user, func) {
         Geocode.fromAddress(user.office_location).then(
             response => {

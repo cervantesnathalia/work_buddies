@@ -6,13 +6,21 @@ class AllTeams extends Component {
     render() {
         let { data } = this.props;
         return (
-           
-            <h1>
+            <div>
                 {data.map((value, index) => {
-                    
-                    return <p key={index}>{util.capital_letter(value.team_name)}</p>;
+                    return (
+                        <div key={index}>
+                            <h1>
+                                <a
+                                    onClick={() => this.props.search(value.team_name, "Team")}
+                                >
+                                    {util.capital_letter(value.team_name)}
+                                </a>
+                            </h1>
+                        </div>
+                    );
                 })}
-            </h1>
+            </div>
         );
     }
 }

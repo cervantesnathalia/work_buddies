@@ -51,6 +51,8 @@ app.get('/allusers', (request, response) => db.getAllUsers(request, response)) /
 
 app.get('/teams', (request, response) => db.getAllTeams(request, response)) //ok
 
+app.get('/teams/name/:name' ,(request, response) => db.getTeamByName(request, response) )
+
 
 
 //PORT - uses a hosting PORT or 3005 - to make easier when deploying  in somewhere.

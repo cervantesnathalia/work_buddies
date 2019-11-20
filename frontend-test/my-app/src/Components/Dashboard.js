@@ -58,9 +58,11 @@ class Dashboard extends Component {
 
             }
         } else if(type === "Team") {
-            API.getAllTeams(this.setApiData);
-        } else {
-            // TODO: Add warning to user to specify type search
+            if (search === ""){
+                API.getAllTeams(this.setApiData)          
+            } else {
+                API.getTeamByName(search , this.setApiData);
+            }
         }
     }
 
@@ -68,6 +70,7 @@ class Dashboard extends Component {
         let lat = this.state.searchResult[0].lat;
         let lng = this.state.searchResult[0].lng;
         this.setState({buttonLoading: true});
+        console.log(lat,lng)
         axios.get(`https://api.timezonedb.com/v2.1/get-time-zone?key=Z5R5TNS6X9F9&format=json&by=position&lat=${lat}&lng=${lng}`)
             .then(
             (response) => {
@@ -96,6 +99,11 @@ class Dashboard extends Component {
                 }
 
                 this.setState({showMeet: true, buttonLoading: false, userTimeRange: userRange, otherTimeRange: otherRange, otherTimeZone: response.data.zoneName, timeDiff: diff});
+            },
+            (error) => {
+                console.log(`Error retrieving timezone for ${this.state.searchResults.name}`)
+
+                this.setState({buttonLoading: false})
             }
         )
     }
