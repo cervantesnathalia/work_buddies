@@ -24,7 +24,7 @@ class App extends Component {
             break;
 
         case "secret":
-            // mainComponent = this.props.auth.isAuthenticated() ? <Dashboard/> : <NotFound/>;
+            mainComponent = this.props.auth.isAuthenticated() ? <Dashboard/> : <NotFound/>;
             mainComponent = <Dashboard {...this.props}/> ;
             break;
 

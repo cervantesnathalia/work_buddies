@@ -5,7 +5,7 @@ class NoData extends Component {
     render() {
         return (
             <Typography>
-                No Data
+                <h1>Search</h1>
             </Typography>
         );
     }

@@ -41,7 +41,7 @@ class RecommendMeetButton extends Component {
         return (
             <div>
                 <div style={{display: 'flex'}}>
-                    <Button variant="outlined" size="medium" color="primary" onClick={this.props.button}>
+                    <Button variant="contained" size="medium" color="primary" onClick={this.props.button}>
                         <RestoreIcon /> Get Recommended Meet time
                     </Button>
 

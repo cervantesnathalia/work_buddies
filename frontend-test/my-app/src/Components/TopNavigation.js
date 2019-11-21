@@ -11,9 +11,12 @@ import auth0 from "auth0-js";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+
+    
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(1),
+
   },
   title: {
     flexGrow: 1,
@@ -33,8 +36,8 @@ export default function TopNavigation(props) {
           <Typography variant="h6" className={classes.title}>
             Work Buddies
           </Typography>
-          <Button color="inherit" >Sign out</Button>
-          {/* onClick={this.props.auth.logout} */}
+          <Button variant = "outlined" color="inherit" onClick={props.auth.logout} >Sign out</Button>
+         
         </Toolbar>
       </AppBar>
     </div>
